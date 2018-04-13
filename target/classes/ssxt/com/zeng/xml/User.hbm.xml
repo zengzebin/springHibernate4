@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-18 17:59:22 by Hibernate Tools 3.6.0.Final -->
+<hibernate-mapping>
+	<class name="ssxt.com.zeng.xml.User" table="Users"  >
+		<id name="userid"  >
+			<column name="userid" />
+			<generator class="identity" />
+		</id>
+		<property name="username" length="30" />
+		<property name="password" length="92" />
+	<!-- 	<set name="roles" table="user_role" inverse="true" lazy="true">
+			<key column="userid" />
+			<many-to-many column="roleid" class="ssxt.com.zeng.xml.Role" />
+		</set> -->
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-12-22 10:10:52 by Hibernate Tools 3.6.0.Final -->
+<hibernate-mapping>
+	<class name="ssxt.com.zeng.xml.BasDeviceInfo" table="bas_device_info">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property name="deviceSn" type="string">
+			<column name="device_sn" length="40">
+				<comment>&#201;&#232;&#177;&#184;&#208;&#242;&#186;&#197;&#163;&#168;SM&#194;&#235;&#163;&#169;</comment>
+			</column>
+		</property>
+		<property name="delFlag" type="java.lang.Integer">
+			<column name="del_flag">
+				<comment>&#202;&#199;&#183;&#241;&#211;&#208;&#208;&#167;</comment>
+			</column>
+		</property>
+		<property name="deviceName" type="string">
+			<column name="device_name" length="100">
+				<comment>&#201;&#232;&#177;&#184;&#195;&#251;&#179;&#198;</comment>
+			</column>
+		</property>
+		<property name="stcd" type="string">
+			<column name="STCD" length="10">
+				<comment>&#188;&#224;&#178;&#226;&#213;&#190;&#177;&#224;&#194;&#235;</comment>
+			</column>
+		</property>
+		<property name="stnm" type="string">
+			<column name="STNM" length="30">
+				<comment>&#188;&#224;&#178;&#226;&#213;&#190;&#195;&#251;&#179;&#198;</comment>
+			</column>
+		</property>
+		<property name="deviceType" type="java.lang.Integer">
+			<column name="device_type">
+				<comment>&#201;&#232;&#177;&#184;&#183;&#214;&#192;&#224;</comment>
+			</column>
+		</property>
+		<property name="maintType" type="int">
+			<column name="maint_type" not-null="true">
+				<comment>&#206;&#172;&#187;&#164;&#183;&#214;&#192;&#224;</comment>
+			</column>
+		</property>
+		<property name="deviceModel" type="string">
+			<column name="device_model" length="50">
+				<comment>&#201;&#232;&#177;&#184;&#208;&#205;&#186;&#197;</comment>
+			</column>
+		</property>
+		<property name="ver" type="string">
+			<column name="ver" length="50">
+				<comment>&#176;&#230;&#177;&#190;&#186;&#197;</comment>
+			</column>
+		</property>
+		<property name="serialNo" type="string">
+			<column name="serial_no" length="100">
+				<comment>&#201;&#232;&#177;&#184;&#208;&#242;&#193;&#208;&#186;&#197;</comment>
+			</column>
+		</property>
+		<property name="status" type="java.lang.Integer">
+			<column name="status">
+				<comment>&#215;&#180;&#204;&#172;</comment>
+			</column>
+		</property>
+		<property name="idenitfication" type="string">
+			<column name="idenitfication" length="30">
+				<comment>&#205;&#168;&#209;&#182;&#201;&#232;&#177;&#184;&#202;&#182;&#177;&#240;&#186;&#197;</comment>
+			</column>
+		</property>
+		<property name="regionId" type="string">
+			<column name="region_id" length="30">
+				<comment>&#185;&#233;&#202;&#244;&#199;&#248;&#211;&#242;ID</comment>
+			</column>
+		</property>
+		<property name="ownerId" type="string">
+			<column name="owner_id" length="30">
+				<comment>&#185;&#233;&#202;&#244;&#181;&#165;&#206;&#187;ID</comment>
+			</column>
+		</property>
+		<property name="deviceInfo" type="string">
+			<column name="device_info">
+				<comment>&#201;&#232;&#177;&#184;&#195;&#232;&#202;&#246;</comment>
+			</column>
+		</property>
+		<property name="factoryName" type="string">
+			<column name="factory_name" length="60">
+				<comment>&#201;&#250;&#178;&#250;&#179;&#167;&#188;&#210;</comment>
+			</column>
+		</property>
+		<property name="factoryTel" type="string">
+			<column name="factory_tel" length="15">
+				<comment>&#179;&#167;&#188;&#210;&#191;&#205;&#183;&#254;&#181;&#231;&#187;&#176;</comment>
+			</column>
+		</property>
+		<property name="supplyerName" type="string">
+			<column name="supplyer_name" length="60">
+				<comment>&#185;&#169;&#211;&#166;&#201;&#204;</comment>
+			</column>
+		</property>
+		<property name="supplyerTel" type="string">
+			<column name="supplyer_tel" length="15">
+				<comment>&#185;&#169;&#211;&#166;&#201;&#204;&#181;&#231;&#187;&#176;</comment>
+			</column>
+		</property>
+		<property name="installTime" type="timestamp">
+			<column name="install_time" length="19">
+				<comment>&#176;&#178;&#215;&#176;&#200;&#213;&#198;&#218;</comment>
+			</column>
+		</property>
+		<property name="maintNo" type="string">
+			<column name="maint_no" length="30">
+				<comment>&#212;&#203;&#206;&#172;&#181;&#165;&#206;&#187;&#177;&#224;&#186;&#197;</comment>
+			</column>
+		</property>
+		<property name="maintName" type="string">
+			<column name="maint_name" length="100">
+				<comment>&#212;&#203;&#206;&#172;&#181;&#165;&#206;&#187;&#195;&#251;&#179;&#198;</comment>
+			</column>
+		</property>
+		<property name="barcode" type="string">
+			<column name="barcode" length="40">
+				<comment>&#212;&#203;&#206;&#172;&#181;&#165;&#206;&#187;&#202;&#182;&#177;&#240;&#194;&#235;</comment>
+			</column>
+		</property>
+		<property name="pollInterval" type="java.lang.Integer">
+			<column name="poll_interval">
+				<comment>&#194;&#214;&#209;&#175;&#188;&#228;&#184;&#244;</comment>
+			</column>
+		</property>
+		<property name="reportFreq" type="java.lang.Integer">
+			<column name="report_freq">
+				<comment>&#201;&#207;&#177;&#168;&#198;&#181;&#194;&#202;(Calendar&#192;&#224;&#179;&#163;&#193;&#191;)</comment>
+			</column>
+		</property>
+		<property name="remark" type="string">
+			<column name="remark">
+				<comment>&#177;&#184;&#215;&#162;</comment>
+			</column>
+		</property>
+		<property name="deviceAddr" type="string">
+			<column name="DEVICE_ADDR" length="10" unique="true">
+				<comment>&#210;&#163;&#178;&#226;&#213;&#190;&#181;&#216;&#214;&#183;</comment>
+			</column>
+		</property>
+		<property name="nt" type="string">
+			<column name="NT">
+				<comment>&#177;&#184;&#215;&#162;</comment>
+			</column>
+		</property>
+		<property name="log" type="big_decimal">
+			<column name="log" precision="10" scale="7">
+				<comment>&#190;&#173;&#182;&#200;</comment>
+			</column>
+		</property>
+		<property name="lat" type="big_decimal">
+			<column name="lat" precision="9" scale="7">
+				<comment>&#206;&#179;&#182;&#200;</comment>
+			</column>
+		</property>
+		<property name="address" type="string">
+			<column name="address" length="50" />
+		</property>
+		<property name="folderName" type="string">
+			<column name="folderName" length="100" />
+		</property>
+
+	</class>
+</hibernate-mapping>

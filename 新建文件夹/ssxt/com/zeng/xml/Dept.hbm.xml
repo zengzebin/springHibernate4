@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-18 17:59:22 by Hibernate Tools 3.6.0.Final -->
+<hibernate-mapping>
+	<class name="ssxt.com.zeng.xml.Dept" table="test_dept" catalog="operxt">
+		<id name="deptId"  >
+			<column name="deptId" />
+			<generator class="identity" />
+		</id>
+		  <property name="deptName" column="deptName" length="50"></property>
+          <!-- 表之间关系映射 -->
+<!--           cascade：设置操作中的级联策略 可选值为 all所有操作情况均进行级联、none所有操作情况均不进行级联、save-update执行更新操作时级联、delete执行删除操作时级联、all-delete-
+ -->       
+              <set name="emps" cascade="save-update,delete">
+              <key column="deptId"></key>
+              <one-to-many class="ssxt.com.zeng.xml.Emp"/>
+          </set>
+	</class>
+</hibernate-mapping>

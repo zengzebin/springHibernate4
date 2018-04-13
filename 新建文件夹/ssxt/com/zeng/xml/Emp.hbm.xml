@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-18 17:59:22 by Hibernate Tools 3.6.0.Final -->
+<hibernate-mapping>
+	<class name="ssxt.com.zeng.xml.Emp" table="test_emp" catalog="operxt">
+		<id name="empNo"  >
+			<column name="empNo" />
+			<generator class="identity" />
+		</id>
+		    <!-- 属性映射 -->
+          <property name="empName" column="empName" length="50"></property>
+         <property name="empBirthday" column="empBirthday"></property>
+         <!-- 表之间关系映射 -->
+         <many-to-one name="dept" column="deptId"></many-to-one>
+	</class>
+</hibernate-mapping>

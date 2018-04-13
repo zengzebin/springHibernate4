@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-18 17:59:22 by Hibernate Tools 3.6.0.Final -->
+<hibernate-mapping>
+	<class name="ssxt.com.zeng.xml.Role" table="Roles"  >
+		<id name="roleid"  >
+			<column name="roleid" />
+			<generator class="identity" />
+		</id>
+		
+		
+		<property name="rolename" length="30" />
+		<property name="ordernum" />
+		<property name="description" length="200" />
+		
+		<set name="users" table="user_role" inverse="true">
+			<key column="roleid" />
+			<many-to-many column="userid" class="ssxt.com.zeng.xml.User" />
+		</set>
+	</class>
+</hibernate-mapping>
